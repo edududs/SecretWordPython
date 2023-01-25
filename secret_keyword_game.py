@@ -2,11 +2,7 @@
 import os
 
 kword = input('Digite a palavra chave: ').upper()
-comandos = {
-    'cls': lambda: os.system('cls'),
-}
-comando = comandos.get('cls')
-comando()
+os.system('cls')
 
 title = 'JOGO DE ADIVINHAÇÃO'
 typed = []
