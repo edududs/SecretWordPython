@@ -1,7 +1,12 @@
-import func
 
-kword = func.upper(input('Digite a palavra chave: '))
-print("\n" * 500)
+import os
+
+kword = input('Digite a palavra chave: ').upper()
+comandos = {
+    'cls': lambda: os.system('cls'),
+}
+comando = comandos.get('cls')
+comando()
 
 title = 'JOGO DE ADIVINHAÇÃO'
 typed = []
@@ -17,7 +22,7 @@ while True:
         print('Você perdeu!\nInfelizmente acabou as suas chances!')
         break
 
-    letter = func.upper(input('Digite uma letra: '))
+    letter = input('Digite uma letra: ').upper()
 
     if len(letter) > 1:
         print('Ahh, aí não vale, só pode digitar uma letra por vez!')
